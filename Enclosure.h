@@ -1,38 +1,20 @@
-
-#include <iostream>
-#include <Animal.h>
-#include <string>
 #ifndef ENCLOSURE_H
 #define ENCLOSURE_H
-using namespace std;
+
+#include "Animal.h"
 
 class Enclosure {
+private:
+    Animal** animals;
+    int capacity;
+    int currentCount;
+
 public:
-    Enclosure();
+    Enclosure(int cap);
     ~Enclosure();
 
-    void addAnimal(Animal* a ){
-
-    //Animal [] += a;
-    string *a = malloc(Animal);
-    Animal [] += malloc(a);
-}
-
-void displayAnimals(){
-
-for (i=0 ; i<= Animal [] ; i++)
-
-cout < Animal [i]<;
-}
-
-
-private:
-Animal [a]= ;
-int capacity;
-int currentCount;
-
-
-
+    void addAnimal(Animal* a);
+    void displayAnimals();
 };
 
-#endif // ENCLOSURE_H
+#endif
