@@ -3,14 +3,19 @@
 
 #include "Animal.h"
 
-//define reptile class here
+class Reptile : public Animal {
+private:
+    bool isVenomous;
 
+public:
+    Reptile();
+    Reptile(string n, int a, bool hungry, bool venomous);
+    ~Reptile();
 
+    void setIsVenomous(bool venomous);
+    bool getIsVenomous();
 
-
-
-
-
-
+    void display() override;
+};
 
 #endif
